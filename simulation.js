@@ -67,7 +67,6 @@
     const heightInput = $('#height-input');
     const btnStart = $('#btn-start');
     const btnReset = $('#btn-reset');
-    const canvasOverlay = $('#canvas-overlay');
     const resultBanner = $('#result-banner');
     const tipText = $('#tip-text');
     const btnNextTip = $('#btn-next-tip');
@@ -854,7 +853,6 @@
         state.lastFrameTime = performance.now();
         state.accumulator = 0;
 
-        canvasOverlay.classList.add('hidden');
         resultBanner.classList.remove('visible');
         btnStart.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg> STOP';
         btnStart.classList.add('running');
@@ -883,7 +881,6 @@
         state.graphData1 = [];
         state.graphData2 = [];
         state.finished = false;
-        canvasOverlay.classList.remove('hidden');
         resultBanner.classList.remove('visible');
         resultBanner.innerHTML = '';
         updateDataPanel();
